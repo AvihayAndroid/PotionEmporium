@@ -51,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         teleport = (Button)  findViewById(R.id.teleport);
 
+        teleport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Notification.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
 
 
