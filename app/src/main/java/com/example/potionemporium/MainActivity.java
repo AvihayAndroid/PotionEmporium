@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     EditText userEt, passEt;
-    Button loginbtn, accountbtn,teleport;
+    Button loginbtn, accountbtn,teleport,teleport2,teleport3,teleport4;
     FirebaseAuth mAuth;
 
     @Override
@@ -50,11 +50,20 @@ public class MainActivity extends AppCompatActivity {
         accountbtn = (Button) findViewById(R.id.createbtn);
         mAuth = FirebaseAuth.getInstance();
         teleport = (Button)  findViewById(R.id.teleport);
+        teleport4 = (Button) findViewById(R.id.teleport4);
 
         teleport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Notification.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        teleport4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity4.class);
                 startActivity(intent);
                 finish();
             }
