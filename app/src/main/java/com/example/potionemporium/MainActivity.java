@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         accountbtn = (Button) findViewById(R.id.createbtn);
         mAuth = FirebaseAuth.getInstance();
         teleport = (Button)  findViewById(R.id.teleport);
+        teleport2 = (Button) findViewById(R.id.teleport2);
+        teleport3 = (Button) findViewById(R.id.teleport3);
         teleport4 = (Button) findViewById(R.id.teleport4);
 
         teleport.setOnClickListener(new View.OnClickListener() {
@@ -60,10 +62,21 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
         teleport4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity4.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        teleport2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity5.class);
                 startActivity(intent);
                 finish();
             }

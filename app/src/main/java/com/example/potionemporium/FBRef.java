@@ -9,4 +9,5 @@ public class FBRef {
     public static DatabaseReference refUser = FBDB.getReference("User");
     public static DatabaseReference refIngredients = FBDB.getReference("Ingredients");
     public static DatabaseReference refPotions = FBDB.getReference("Potions");
+    public static DatabaseReference refChat = FBDB.getReference("Comms");
 }

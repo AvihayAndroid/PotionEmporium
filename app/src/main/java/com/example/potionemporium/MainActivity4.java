@@ -79,14 +79,5 @@ public class MainActivity4 extends AppCompatActivity {
             unregisterReceiver(networkStateReceiver);
         }
     }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if(ison.getBoolean("datacheck",false)==true) {
-            IntentFilter connectFilter2 = new IntentFilter();
-            connectFilter2.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-            registerReceiver(networkStateReceiver, connectFilter2);
-        }
 
-    }
 }
