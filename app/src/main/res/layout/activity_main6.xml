@@ -4,25 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity3">
+    tools:context=".MainActivity6">
     <Button
-        android:id="@+id/logoutbtn"
+        android:id="@+id/sendtext"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:text="Logout"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7"
-        />
-    <Button
-        android:id="@+id/chattingbtn"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:text="Go Chat"
+        android:text="Send Text"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,22 +18,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9"
         />
-    <TextView
+    <Button
+        android:id="@+id/connection"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:text="You are signed in"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        />
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:text="This information is read from the Firebase RTDB"
+        android:text="Connect"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,9 +31,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3"
         />
-
+    <EditText
+        android:id="@+id/connectet"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:hint="Search person"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        />
+    <EditText
+        android:id="@+id/sharedtext"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:hint="Enter text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        />
     <TextView
-        android:id="@+id/act3tv"
+        android:id="@+id/texttv"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:text=""
@@ -67,9 +68,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintVertical_bias="0.7"
         />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

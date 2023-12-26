@@ -20,7 +20,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity3 extends AppCompatActivity {
-    Button logout;
+    Button logout,gochat;
     FirebaseAuth mAuth;
     FirebaseUser user;
     User testxd;
@@ -33,6 +33,7 @@ public class MainActivity3 extends AppCompatActivity {
         logout = (Button)findViewById(R.id.logoutbtn);
         mAuth = FirebaseAuth.getInstance();
         tvxd = (TextView)findViewById(R.id.act3tv);
+        gochat = findViewById(R.id.chattingbtn);
         user=mAuth.getCurrentUser();
         if(user == null){
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -41,6 +42,14 @@ public class MainActivity3 extends AppCompatActivity {
         }else {
             Toast.makeText(this, "You are signed in as "+user.getEmail(), Toast.LENGTH_SHORT).show();
         }
+        gochat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity6.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

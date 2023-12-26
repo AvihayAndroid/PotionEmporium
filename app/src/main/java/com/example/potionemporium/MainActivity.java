@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         teleport = (Button)  findViewById(R.id.teleport);
         teleport2 = (Button) findViewById(R.id.teleport2);
-        teleport3 = (Button) findViewById(R.id.teleport3);
         teleport4 = (Button) findViewById(R.id.teleport4);
 
         teleport.setOnClickListener(new View.OnClickListener() {
