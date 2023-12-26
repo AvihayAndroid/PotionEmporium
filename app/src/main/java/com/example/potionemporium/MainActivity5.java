@@ -2,6 +2,7 @@ package com.example.potionemporium;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -13,7 +14,7 @@ import java.util.Locale;
 
 public class MainActivity5 extends AppCompatActivity {
     private static final long START_TIME_IN_MILLIS = 60000;
-    private Button StartPausebtn,Resetbtn;
+    private Button StartPausebtn,Resetbtn,leavexd;
     private TextView TvCD;
     private CountDownTimer cdt;
     private boolean mTimerRunning;
@@ -27,6 +28,16 @@ public class MainActivity5 extends AppCompatActivity {
         StartPausebtn = (Button) findViewById(R.id.StartCD);
         Resetbtn = (Button) findViewById(R.id.ResetCD);
         TvCD = (TextView) findViewById(R.id.TvCD);
+        leavexd = findViewById(R.id.leavexd);
+
+        leavexd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         StartPausebtn.setOnClickListener(new View.OnClickListener() {
             @Override
